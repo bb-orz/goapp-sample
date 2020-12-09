@@ -1,0 +1,1 @@
+# goinfras-sample
