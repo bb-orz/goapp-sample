@@ -2,9 +2,9 @@ package restful
 
 import (
 	"fmt"
+	"github.com/bb-orz/goinfras-sample/simple/services"
 	"github.com/gin-gonic/gin"
-	"goinfras/XGin"
-	"goinfras/example/simple/services"
+	"github.com/bb-orz/goinfras/XGin"
 )
 
 func init() {
