@@ -22,8 +22,8 @@ func (s *SimpleApi) SetRoutes() {
 
 	engine := XGin.XEngine()
 
-	engine.POST("simple/foo", s.Foo)
-	engine.POST("simple/bar", s.Bar)
+	engine.GET("simple/foo", s.Foo)
+	engine.GET("simple/bar", s.Bar)
 }
 
 func (s *SimpleApi) Foo(ctx *gin.Context) {
