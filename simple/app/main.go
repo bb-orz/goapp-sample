@@ -10,7 +10,7 @@ var app *goinfras.Application // 应用实例
 func main() {
 	// 注册应用组件启动器
 	fmt.Println("Viper Config Loading  ......")
-	ViperLoader()
+	viperCfg := goinfras.ViperLoader()
 
 	// 注册应用组件启动器
 	fmt.Println("Register Starters  ......")
