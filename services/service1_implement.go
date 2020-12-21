@@ -2,6 +2,7 @@ package services
 
 import (
 	"fmt"
+	"github.com/bb-orz/goinfras-sample"
 	"sync"
 )
 
@@ -9,18 +10,18 @@ import (
 实现服务逻辑
 */
 
-var _ IService1 = new(Service1)
+var _ goinfras_sample.IService1 = new(Service1)
 
 func init() {
 	var once sync.Once
 	once.Do(func() {
-		SetService1(new(Service1))
+		goinfras_sample.SetService1(new(Service1))
 	})
 }
 
 type Service1 struct{}
 
-func (s *Service1) Foo(i InDTO) error {
+func (s *Service1) Foo(i goinfras_sample.InDTO) error {
 	var err error
 	// TODO 实现模块业务逻辑domain
 	fmt.Println("实现模块业务逻辑domain —— Foo")
@@ -28,7 +29,7 @@ func (s *Service1) Foo(i InDTO) error {
 	return err
 }
 
-func (s *Service1) Bar(i InDTO) error {
+func (s *Service1) Bar(i goinfras_sample.InDTO) error {
 	var err error
 	// TODO 实现模块业务逻辑domain
 	fmt.Println("实现模块业务逻辑domain —— Bar")

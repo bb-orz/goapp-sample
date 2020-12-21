@@ -9,7 +9,7 @@ import (
 	"github.com/bb-orz/goinfras/XValidate"
 	"github.com/gin-gonic/gin"
 
-	_ "github.com/bb-orz/goinfras-sample/simple/restful" // 自动载入Restful API模块
+	_ "github.com/bb-orz/goinfras-sample/restful" // 自动载入Restful API模块
 	"github.com/bb-orz/goinfras/XGin"
 	"io"
 	"os"
