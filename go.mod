@@ -4,7 +4,7 @@ go 1.14
 
 replace (
 	cloud.google.com/go => github.com/googleapis/google-cloud-go v0.47.0
-	github.com/bb-orz/goinfras => /Users/fun/Code/MyProject/goinfras
+	// github.com/bb-orz/goinfras => /Users/fun/Code/MyProject/goinfras
 	github.com/coreos/bbolt => go.etcd.io/bbolt v1.3.4
 	github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
 	go.uber.org/atomic => github.com/uber-go/atomic v1.5.0
@@ -36,7 +36,7 @@ require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.296 // indirect
 	github.com/aliyun/aliyun-oss-go-sdk v2.0.8+incompatible // indirect
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
-	github.com/bb-orz/goinfras v0.0.0-00010101000000-000000000000
+	github.com/bb-orz/goinfras v1.1.3
 	github.com/bmizerany/pq v0.0.0-20131128184720-da2b95e392c1 // indirect
 	github.com/coreos/bbolt v1.3.5 // indirect
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
