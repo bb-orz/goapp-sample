@@ -3,19 +3,21 @@ package main
 import (
 	"fmt"
 	"github.com/bb-orz/goinfras"
-	"github.com/bb-orz/goinfras-sample"
+
 )
 
 var app *goinfras.Application // 应用实例
 
 func main() {
-	// 注册应用组件启动器
+
 	fmt.Println("Viper Config Loading  ......")
 	viperCfg := goinfras.ViperLoader()
 
 	// 注册应用组件启动器
 	fmt.Println("Register Starters  ......")
-	goinfras_sample.RegisterStarter()
+
+
+	RegisterStarter()
 
 	// 创建应用程序启动管理器
 	app = goinfras.NewApplication(viperCfg)

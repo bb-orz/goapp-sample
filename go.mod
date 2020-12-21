@@ -1,4 +1,4 @@
-module github.com/bb-orz/goinfras-sample
+module goinfras-sample
 
 go 1.14
 
