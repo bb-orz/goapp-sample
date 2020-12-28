@@ -3,7 +3,7 @@ package middleware
 import (
 	"github.com/bb-orz/goinfras/XLogger"
 	"github.com/gin-gonic/gin"
-	"goapp-simple/common"
+	"goapp-sample/common"
 	"net/http"
 )
 

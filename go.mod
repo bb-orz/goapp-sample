@@ -1,4 +1,4 @@
-module goapp-simple
+module goapp-sample
 
 go 1.14
 
