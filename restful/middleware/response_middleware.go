@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"goinfras-simple/common"
+	"goapp-simple/common"
 	"net/http"
 )
 

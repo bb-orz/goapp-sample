@@ -1,4 +1,4 @@
-module goinfras-simple
+module goapp-simple
 
 go 1.14
 

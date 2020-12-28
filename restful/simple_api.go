@@ -2,7 +2,7 @@ package restful
 
 import (
 	"fmt"
-	"goinfras-simple/services"
+	"goapp-simple/services"
 	"github.com/gin-gonic/gin"
 	"github.com/bb-orz/goinfras/XGin"
 )

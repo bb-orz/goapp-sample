@@ -2,8 +2,8 @@ package core
 
 import (
 	"fmt"
-	"goinfras-simple/dtos"
-	"goinfras-simple/services"
+	"goapp-simple/dtos"
+	"goapp-simple/services"
 	"sync"
 )
 
