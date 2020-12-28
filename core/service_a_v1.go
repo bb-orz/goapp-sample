@@ -1,7 +1,9 @@
-package services
+package core
 
 import (
 	"fmt"
+	"goinfras-simple/dtos"
+	"goinfras-simple/services"
 	"sync"
 )
 
@@ -10,20 +12,19 @@ import (
 */
 
 
-var _ IService1 = new(Service1)
+var _ services.IServiceA = new(ServiceAV1)
 
 func init() {
 	var once sync.Once
 	once.Do(func() {
-
-		SetService1(new(Service1))
+		services.SetServiceA(new(ServiceAV1))
 	})
 }
 
-type Service1 struct{}
+type ServiceAV1 struct{}
 
 
-func (s *Service1) Foo(i InDTO) error {
+func (s *ServiceAV1) Foo(i dtos.InDTO) error {
 	var err error
 	// TODO 实现模块业务逻辑domain
 	fmt.Println("实现模块业务逻辑domain —— Foo")
@@ -32,7 +33,7 @@ func (s *Service1) Foo(i InDTO) error {
 }
 
 
-func (s *Service1) Bar(i InDTO) error {
+func (s *ServiceAV1) Bar(i dtos.InDTO) error {
 	var err error
 	// TODO 实现模块业务逻辑domain
 	fmt.Println("实现模块业务逻辑domain —— Bar")

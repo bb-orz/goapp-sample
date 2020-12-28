@@ -1,9 +1,10 @@
 {
-
   "Global": {
     "Env": "debug",
-    "AppName": "MyApp",
-    "ServerName": "example.com"
+    "Host": "example.com",
+    "Endpoint": "localhost",
+    "AppName": "goinfras_application",
+    "Version": "v1.0.0"
   },
   "Gin": {
     "Mode": "debug",
@@ -11,7 +12,8 @@
     "ListenPort": 8090,
     "Tls": false,
     "CertFile": "",
-    "KeyFile": ""
+    "KeyFile": "",
+    "RecoveryDebugStack": true
   },
   "Echo": {
     "Debug": true,
@@ -25,8 +27,14 @@
   "Cron": {
     "Location": "Local"
   },
+  "Jwt": {
+    "UseCache": true,
+    "PrivateKey": "jwt_@key",
+    "ExpSeconds": 3600,
+    "TokenCacheKeyPrefix": "user.jwt.token."
+  },
   "OAuth": {
-    "WechatSignSwitch": false,
+    "WechatSignSwitch": true,
     "WechatOAuth2AppKey": "",
     "WechatOAuth2AppSecret": "",
     "WeiboSignSwitch": false,
@@ -53,28 +61,29 @@
     "MaxCallSendMsgSize": 0
   },
   "Logger": {
-    "AppName": "",
-    "AppVersion": "",
+    "AppName": "goinfras-simple",
+    "AppVersion": "v1.0.0",
     "DevEnv": true,
-    "DebugLevelSwitch": false,
-    "InfoLevelSwitch": true,
-    "WarnLevelSwitch": true,
-    "ErrorLevelSwitch": true,
-    "DPanicLevelSwitch": true,
-    "PanicLevelSwitch": false,
-    "FatalLevelSwitch": true,
-    "SimpleZapCore": true,
-    "RotateZapCore": false,
-    "SyncZapCore": false,
-    "StdoutLogSwitch": true,
-    "LogDir": "./log",
-    "RetateLogSwitch": false,
-    "MaxDayCount": 30,
+    "AddCaller": true,
+    "DisableDebugLevelSwitch": false,
+    "DisableInfoLevelSwitch": false,
+    "DisableWarnLevelSwitch": false,
+    "DisableErrorLevelSwitch": false,
+    "DisableDPanicLevelSwitch": false,
+    "DisablePanicLevelSwitch": false,
+    "DisableFatalLevelSwitch": false,
+    "EnableStdZapCore": true,
+    "EnableFileZapCore": false,
+    "FileLogName": "./log/common.log",
+    "SyncErrorLogName": "./log/sync_error.log",
+    "EnableRotateZapCore": false,
+    "RotateLogDir": "./log/",
     "WithRotationTime": 1,
-    "SyncLogSwitch": false,
-    "MongoLogSwitch": false,
-    "MongoLogCollection": "ginger_log",
-    "MongoLogExpire": 0
+    "MaxDayCount": 365,
+    "EnableMongoLogZapCore": false,
+    "MongoLogDbName": "zap_log",
+    "MongoLogCollection": "zap_log",
+    "MongoLogExpire": 365
   },
   "Mysql": {
     "DbHost": "127.0.0.1",
@@ -103,7 +112,7 @@
     "ChartSet": "utf8",
     "ParseTime": true,
     "Local": "Local",
-    "ConnMaxLifetime": 3600,
+    "ConnMaxLifetime": 100,
     "MaxOpenConns": 100,
     "MaxIdleConns": 10,
     "DefaultStringSize": 256,
@@ -136,6 +145,11 @@
     "RetryReads": true,
     "RetryWrites": true
   },
+  "Gocache": {
+    "DefaultExpiration": 0,
+    "CleanupInterval": -1,
+    "DumpFileName": "./cache/keys.json"
+  },
   "Redis": {
     "DbHost": "127.0.0.1",
     "DbPort": 6379,
@@ -146,7 +160,6 @@
     "IdleTimeout": 60
   },
   "RedisPubSub": {
-    "Switch": false,
     "DbHost": "localhost",
     "DbPort": 6379,
     "DbAuth": false,
@@ -156,19 +169,16 @@
     "IdleTimeout": 0
   },
   "NatsMq": {
-    "Switch": false,
     "NatsServer": [
       {
         "Host": "",
         "Port": 0,
-        "AuthSwitch": false,
         "UserName": "",
         "Password": ""
       }
     ]
   },
   "QiniuOss": {
-    "Switch": false,
     "AccessKey": "",
     "SecretKey": "",
     "Bucket": "",
@@ -183,7 +193,6 @@
     "MimeLimit": "image/jpeg;image/png;image/gif"
   },
   "AliyunOss": {
-    "Switch": false,
     "AccessKeyId": "",
     "AccessKeySecret": "",
     "BucketName": "",
@@ -242,10 +251,5 @@
     "Port": null,
     "User": "",
     "Password": ""
-  },
-  "Jwt": {
-    "UseCache": true,
-    "PrivateKey": "keykeykeykey",
-    "ExpSeconds": 3600
   }
 }
