@@ -36,7 +36,7 @@ require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.296 // indirect
 	github.com/aliyun/aliyun-oss-go-sdk v2.0.8+incompatible // indirect
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
-	github.com/bb-orz/goinfras v1.1.3
+	github.com/bb-orz/goinfras v1.1.6
 	github.com/bmizerany/pq v0.0.0-20131128184720-da2b95e392c1 // indirect
 	github.com/coreos/bbolt v1.3.5 // indirect
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
@@ -47,7 +47,7 @@ require (
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/elastic/go-elasticsearch/v8 v8.0.0-20201202142044-1e78b5bf06b1 // indirect
 	github.com/fastly/go-utils v0.0.0-20180712184237-d95a45783239 // indirect
-	github.com/gin-contrib/cors v1.3.1 // indirect
+	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
@@ -89,7 +89,7 @@ require (
 	go.mongodb.org/mongo-driver v1.3.2 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
-	go.uber.org/zap v1.16.0 // indirect
+	go.uber.org/zap v1.16.0
 	golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9 // indirect
 	golang.org/x/lint v0.0.0-20201208152925-83fdc39ff7b5 // indirect
 	golang.org/x/net v0.0.0-20201209123823-ac852fbbde11 // indirect
@@ -101,7 +101,7 @@ require (
 	google.golang.org/grpc v1.34.0 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
-	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
+	gopkg.in/go-playground/validator.v9 v9.31.0
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gorm.io/driver/mysql v1.0.3 // indirect
