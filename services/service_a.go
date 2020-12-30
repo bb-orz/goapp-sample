@@ -1,6 +1,6 @@
 package services
 
-import "goapp-sample/dtos"
+import "goapp/dtos"
 
 /*
 定义服务及数据传输对象

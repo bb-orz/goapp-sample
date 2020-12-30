@@ -2,8 +2,8 @@ package core
 
 import (
 	"fmt"
-	"goapp-sample/dtos"
-	"goapp-sample/services"
+	"goapp/dtos"
+	"goapp/services"
 	"sync"
 )
 

@@ -2,8 +2,8 @@ package restful
 
 import (
 	"fmt"
-	"goapp-sample/dtos"
-	"goapp-sample/services"
+	"goapp/dtos"
+	"goapp/services"
 	"github.com/gin-gonic/gin"
 	"github.com/bb-orz/goinfras/XGin"
 )
