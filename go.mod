@@ -36,7 +36,7 @@ require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.296 // indirect
 	github.com/aliyun/aliyun-oss-go-sdk v2.0.8+incompatible // indirect
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
-	github.com/bb-orz/goinfras v1.1.6
+	github.com/bb-orz/goinfras v1.2.0
 	github.com/bmizerany/pq v0.0.0-20131128184720-da2b95e392c1 // indirect
 	github.com/coreos/bbolt v1.3.5 // indirect
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
