@@ -6,11 +6,15 @@ import (
 	"goapp/services"
 	"github.com/gin-gonic/gin"
 	"github.com/bb-orz/goinfras/XGin"
+	"sync"
 )
 
 func init() {
-	// 初始化时自动注册该API到Gin Engine
-	XGin.RegisterApi(new(SimpleApi))
+	var once sync.Once
+	once.Do(func() {
+		// 初始化时自动注册该API到Gin Engine
+		XGin.RegisterApi(new(SimpleApi))
+	})
 }
 
 type SimpleApi struct {
