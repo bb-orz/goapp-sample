@@ -1,4 +1,4 @@
-package module_a
+package example
 
 /*
 实现业务领域逻辑

@@ -1,5 +1,4 @@
-### 用户账户API应用示例
-一个使用bb-orz/goinfras 搭建的简单应用脚手架
+### 基于bb-orz/goinfras 搭建的简单应用脚手架
 
 
 #### 目录结构
@@ -11,7 +10,6 @@ goapp       项目
 |-- config          配置文件；
 |-- dtos            数据传输对象dto定义；            
 |-- restful         接口层：restful api网关；
-|-- rpc             接口层：rpc service；
 |-- web             web表现层； 
 |-- services        服务层：服务层解耦接口层和core核心业务逻辑（领域层、数据访问层、缓冲层），内部定义项目提供的业务能力，不实现具体业务逻辑，通过调用core内部各领域模块的具体实现提供服务；
 |-- core            核心业务逻辑：服务层业务逻辑，以模块化方式封装，每个模块封装各自的领域设计、数据模型、数据访问、缓存等实现；
@@ -55,16 +53,12 @@ goapp       项目
  - 可使用任何web框架实现
  - 如使用go web 框架，只需将其做成启动器并注册即可，具体实现形式与restful类似，只不过多了个表现层/渲染模板
  
-#### rpc
- - rpc service实现
- - 可根据需要选择不同的rpc框架
- - 建议实现的service server/client做成启动器的方式运行
- 
+
 #### services
  - 文件名称使用为可以描述其业务含义的单词
  - 需要对外暴露的：
-    - DTO、service interface 接口方法
-    - 常量枚举、常数等 
+    - service interface 接口方法
+    - service 具体实现服务接口的不同版本
 
 #### core 
  - core层为业务逻辑的具体实现；

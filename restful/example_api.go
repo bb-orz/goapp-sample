@@ -18,12 +18,12 @@ func init() {
 }
 
 type SimpleApi struct {
-	service1 services.IServiceA
+	serv services.IServiceExample
 }
 
 // SetRouter由Gin Engine 启动时调用
 func (s *SimpleApi) SetRoutes() {
-	s.service1 = services.GetServiceA()
+	s.serv = services.GetServiceExample()
 	engine := XGin.XEngine()
 
 	engine.GET("simple/foo", s.Foo)
@@ -33,7 +33,7 @@ func (s *SimpleApi) SetRoutes() {
 func (s *SimpleApi) Foo(ctx *gin.Context) {
 	email := ctx.Param("email")
 	// 调用服务
-	err := s.service1.Foo(dtos.InDTO{Email: email})
+	err := s.serv.Foo(dtos.InDTO{Email: email})
 
 	// 处理错误
 	fmt.Println(err)
@@ -42,6 +42,6 @@ func (s *SimpleApi) Foo(ctx *gin.Context) {
 func (s *SimpleApi) Bar(ctx *gin.Context) {
 	email := ctx.Param("email")
 	// 调用服务
-	err := s.service1.Bar(dtos.InDTO{Email: email})
+	err := s.serv.Bar(dtos.InDTO{Email: email})
 	fmt.Println(err)
 }

@@ -1,9 +1,8 @@
-package core
+package services
 
 import (
 	"fmt"
 	"goapp/dtos"
-	"goapp/services"
 	"sync"
 )
 
@@ -12,19 +11,19 @@ import (
 */
 
 
-var _ services.IServiceA = new(ServiceAV1)
+var _ IServiceExample = new(ServiceExampleV1)
 
 func init() {
 	var once sync.Once
 	once.Do(func() {
-		services.SetServiceA(new(ServiceAV1))
+		SetServiceExample(new(ServiceExampleV1))
 	})
 }
 
-type ServiceAV1 struct{}
+type ServiceExampleV1 struct{}
 
 
-func (s *ServiceAV1) Foo(i dtos.InDTO) error {
+func (s *ServiceExampleV1) Foo(i dtos.InDTO) error {
 	var err error
 	// TODO 实现模块业务逻辑domain
 	fmt.Println("实现模块业务逻辑domain —— Foo")
@@ -33,7 +32,7 @@ func (s *ServiceAV1) Foo(i dtos.InDTO) error {
 }
 
 
-func (s *ServiceAV1) Bar(i dtos.InDTO) error {
+func (s *ServiceExampleV1) Bar(i dtos.InDTO) error {
 	var err error
 	// TODO 实现模块业务逻辑domain
 	fmt.Println("实现模块业务逻辑domain —— Bar")
