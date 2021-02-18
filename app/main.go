@@ -4,9 +4,7 @@ import (
 	"fmt"
 	"github.com/bb-orz/goinfras"
 	"github.com/bb-orz/goinfras/XGin"
-	"github.com/bb-orz/goinfras/XGlobal"
 	"github.com/bb-orz/goinfras/XLogger"
-	"github.com/bb-orz/goinfras/XStore/XGorm"
 	"github.com/bb-orz/goinfras/XValidate"
 	"github.com/spf13/viper"
 	"goapp/restful/middleware"
@@ -35,12 +33,11 @@ func main() {
 
 // 注册应用组件启动器，把基础设施各资源组件化
 func RegisterStarter(viperConfig *viper.Viper) {
-	goinfras.RegisterStarter(XGlobal.NewStarter())
 
 	goinfras.RegisterStarter(XLogger.NewStarter())
 
 	// 注册mysql启动器
-	goinfras.RegisterStarter(XGorm.NewStarter())
+	// goinfras.RegisterStarter(XGorm.NewStarter())
 
 	// 注册验证器
 	goinfras.RegisterStarter(XValidate.NewStarter())

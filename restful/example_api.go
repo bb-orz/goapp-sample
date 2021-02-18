@@ -26,8 +26,8 @@ func (s *SimpleApi) SetRoutes() {
 	s.serv = services.GetServiceExample()
 	engine := XGin.XEngine()
 
-	engine.GET("simple/foo", s.Foo)
-	engine.GET("simple/bar", s.Bar)
+	engine.GET("/simple/foo", s.Foo)
+	engine.GET("/simple/bar", s.Bar)
 }
 
 func (s *SimpleApi) Foo(ctx *gin.Context) {

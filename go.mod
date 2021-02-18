@@ -1,6 +1,6 @@
 module goapp
 
-go 1.14
+go 1.15
 
 replace (
 	cloud.google.com/go => github.com/googleapis/google-cloud-go v0.47.0
@@ -33,7 +33,7 @@ replace (
 )
 
 require (
-	github.com/bb-orz/goinfras v1.2.7
+	github.com/bb-orz/goinfras v1.2.8
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.6.3
 	github.com/spf13/viper v1.7.1
